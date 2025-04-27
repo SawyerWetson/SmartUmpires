@@ -1,0 +1,18 @@
+# Configuration file for SmartUmpire
+
+camera:
+  resolution: 
+    width: 1280  # Width of the camera feed in pixels
+    height: 720  # Height of the camera feed in pixels
+  frame_rate: 30  # Frames per second
+
+strike_zone:
+  width: 250  # Width of the strike zone in pixels
+  height: 350  # Height of the strike zone in pixels
+  border_color: "rgba(255, 0, 0, 0.8)"  # Border color of the strike zone
+  shadow_color: "rgba(255, 0, 0, 0.8)"  # Shadow color of the strike zone
+  background_color: "rgba(255, 255, 255, 0.1)"  # Background color of the strike zone
+
+ui:
+  fullscreen: true  # Enable fullscreen mode for the app
+  dark_mode: true  # Enable dark mode for the application
