@@ -1,1 +1,19 @@
-
+{
+  "name": "smart-umpires",
+  "version": "1.0.0",
+  "description": "New System for umpires that displays a strike zone and uses camera",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No test specified\" && exit 1"
+  },
+  "keywords": [
+    "umpires",
+    "strike-zone",
+    "camera-system"
+  ],
+  "author": "SawyerWetson",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
