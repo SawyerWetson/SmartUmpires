@@ -5,7 +5,17 @@ set -e
 
 # Display a welcome message
 echo "Welcome to the SmartUmpires installation script."
-if [dir = "SawyerWetson/SmartUmpires/"]
+
+# Define the current directory
+dir=$(pwd)
+
+# Check if the current directory matches expected path
+if [ "$dir" = "/path/to/SawyerWetson/SmartUmpires" ]; then
+    echo "Correct directory detected: $dir"
+else
+    echo "Warning: You are not in the expected directory. Current directory: $dir"
+fi
+
 # Ensure the script is being run as root
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root. Please run again with sudo." 
