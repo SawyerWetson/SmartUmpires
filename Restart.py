@@ -23,6 +23,6 @@ While True:
       os.system("git reset -- hard && git pull SawyerWetson/SmartUmpires")
       os.system("start Build.html")
 
-      time.sleep(5
+      time.sleep(5)
   
      
