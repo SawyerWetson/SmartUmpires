@@ -102,3 +102,5 @@ This project is licensed under the **BSD-Clause 3 License**. See the `LICENSE` f
 ## 📫 Contact
 sawyer.wetson@gmail.com
 
+
+![SmartUmpire logo (1)](https://github.com/user-attachments/assets/929e5b66-b95f-4d91-9d39-8a678caa955d)
