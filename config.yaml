@@ -16,3 +16,5 @@ strike_zone:
 ui:
   fullscreen: true  # Enable fullscreen mode for the app
   dark_mode: true  # Enable dark mode for the application
+  quality_enhancment: true # Enable Enhancement for the application
+
