@@ -89,7 +89,7 @@ We welcome contributions to SmartUmpires! Here’s how you can help:
 
 ## 📜 License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+This project is licensed under the **BSD-Clause 3 License**. See the `LICENSE` file for details.
 
 ---
 
