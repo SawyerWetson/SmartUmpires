@@ -1,4 +1,4 @@
-Here’s an improved version of the `README.md` for the **SmartUmpires** project:
+
 
 ---
 
@@ -100,9 +100,5 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 ---
 
 ## 📫 Contact
+sawyer.wetson@gmail.com
 
-For questions or feedback, feel free to open an issue or reach out to the repository owner.
-
----
-
-Let me know if you'd like to include additional sections or details!
