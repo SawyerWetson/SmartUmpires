@@ -28,6 +28,7 @@ The primary aim of SmartUmpires is to **revolutionize the sports world** by intr
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Configuration**: YAML (YAML Ain't Markup Language) and JSON
+- **Upkeep And Installation** Python and Bash(Shell)
 - **Hardware Integration**: Cameras (details to be added upon completion)
 
 ---
