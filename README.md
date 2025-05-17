@@ -16,11 +16,11 @@ The primary aim of SmartUmpires is to **revolutionize the sports world** by intr
 
 ## 📋 Features
 
-- **Strike Zone Display**: A visual representation of the strike zone, dynamically adjusted for each batter.
+- **Strike Zone Display**: A visual representation of the strike zone, always displayed.
 - **Camera Integration**: High-tech cameras to capture real-time pitch data and ensure accuracy.
-- **Count Tracker**: Tracks balls and strikes for each batter in real-time.
 - **Configurable Settings**: Uses **YAML** and **JSON** for customizable configurations.
 - Built with **HTML**, **CSS**, and **JavaScript** for a seamless and interactive interface.
+- **Matinence**: Built with python and Bash to mantain server and HTML status and report data
 
 ---
 
