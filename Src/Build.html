@@ -76,5 +76,18 @@ body {
 
     startCamera();
   </script>
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/Src/service-worker.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful:', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed:', err);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
