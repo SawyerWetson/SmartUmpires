@@ -12,5 +12,5 @@ class __init1__:
     self.system = system
 
 
- SysData = __init1__("Smart Umpires", "Github Repository SawyerWetson/SmartUmpires")
- print(f"System Info: {SysData}")
+SysData = __init1__("Smart Umpires", "Github Repository SawyerWetson/SmartUmpires")
+print(f"System Info: {SysData}")
