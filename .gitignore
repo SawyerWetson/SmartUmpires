@@ -1,13 +1,87 @@
+# Byte-compiled / optimized / DLL files for Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv/
+.pip/
+pip-wheel-metadata/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints (if you use notebooks)
+.ipynb_checkpoints/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Bash history and shell environment
+.bash_history
+.bashrc
+
+# Node modules (if you use Node.js tooling)
+node_modules/
+
+# Dependency directories
+bower_components/
+
+# lock files (npm, yarn, pipenv)
+package-lock.json
+yarn.lock
+Pipfile.lock
+
+# Compiled source #
+*.com
+*.class
+*.dll
+*.o
+*.pyc
+*.pyo
+*.exe
+*.out
+
+# Archives
+*.zip
 *.tar
 *.tar.*
-*.jar
-*.exe
-*.msi
-*.zip
 *.tgz
-*.log
-*.log.*
-*.sig
+*.gz
 
+# Secret files (adjust as needed)
+.env
+.env.*
+
+# Miscellaneous
+*.swp
+*.swo
+
+# Ignore IDE/editor configs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore test coverage reports
+.coverage
+htmlcov/
+coverage.xml
+
+# Ignore YAML/JSON configs with secrets (customize as needed)
+secrets*.yml
+secrets*.yaml
+secrets*.json
+
+# Existing project ignores
 pkg/
 src/
