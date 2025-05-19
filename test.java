@@ -3,4 +3,7 @@ public class test {
     String Numbers = "44";
     int NewNumbers = Integer.parseInt(Numbers);
     double AddedNumbers = NewNumbers + 1.0;
+    System.out.println(AddedNumbers);
+  }
+}
     
