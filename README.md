@@ -30,6 +30,7 @@ The primary aim of SmartUmpires is to **revolutionize the sports world** by intr
 - **Configuration**: YAML (YAML Ain't Markup Language) and JSON
 - **Upkeep And Installation** Python and Bash(Shell)
 - **Hardware Integration**: Cameras (details to be added upon completion)
+- **Ball Tracking** Uses Opencv2 library and YAML installation
 
 ---
 
