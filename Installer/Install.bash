@@ -10,7 +10,7 @@ echo "Welcome to the SmartUmpires installation script."
 dir=$(pwd)
 
 # Check if the current directory matches expected path
-if [ "$dir" = "/path/to/SawyerWetson/SmartUmpires" ]; then
+if [ "$dir" = "https://www.github.com/SawyerWetson/SmartUmpires/" ]; then
     echo "Correct directory detected: $dir"
 else
     echo "Warning: You are not in the expected directory. Current directory: $dir"
