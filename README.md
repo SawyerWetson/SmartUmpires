@@ -99,6 +99,10 @@ This project is licensed under the **BSD-Clause 3 License**. See the `LICENSE` f
 
 *(Screenshots or GIFs of the interface and features can be added here once available.)*
 
+## Credits
+
+Whole project was created by Sawyer Wetson, age: 11. AI(copilot) was used to create some of the .gitignore and bash "Install" file and partially used to learn what to do, what files to include, and how to use them. Otherwise, all coding knowledge was learned from CodeWiz classes(python) W3schools(PHP, JSON, Bash) and other websites or prior knowledge/expreience to computer programming. 
+
 ---
 
 ## 📫 Contact
