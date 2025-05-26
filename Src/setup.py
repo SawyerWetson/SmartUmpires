@@ -58,7 +58,7 @@ while True:
 
     # show the video window
     cv2.imshow("Strike Zone Baseball Tracking", frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'): # keycode for q  to exit program (& OXFF) make sure we only look at the key part
         break  # press q to quit
 
 cap.release()
