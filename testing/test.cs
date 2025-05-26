@@ -10,6 +10,7 @@ namespace Test;
             Console.WriteLine("Test Test");
             string testVariable1 = Console.ReadLine();
             int testVariable2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(testVariable2);
         
     
         
