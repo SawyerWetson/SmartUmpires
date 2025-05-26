@@ -19,18 +19,17 @@ The primary aim of SmartUmpires is to **revolutionize the sports world** by intr
 - **Strike Zone Display**: A visual representation of the strike zone, always displayed.
 - **Camera Integration**: High-tech cameras to capture real-time pitch data and ensure accuracy.
 - **Configurable Settings**: Uses **YAML** and **JSON** for customizable configurations.
-- Built with **HTML**, **CSS**, and **JavaScript** for a seamless and interactive interface.
 - **Matinence**: Built with python and Bash to mantain server and HTML status and report data
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript
 - **Configuration**: YAML (YAML Ain't Markup Language) and JSON
 - **Upkeep And Installation** Python and Bash(Shell)
 - **Hardware Integration**: Cameras (details to be added upon completion)
 - **Ball Tracking** Uses Opencv2 library and YAML installation
+- **Strike Zone** Uses Opencv2 library to draw strike zone 
 
 ---
 
