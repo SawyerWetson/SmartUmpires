@@ -1,0 +1,8 @@
+dependencies {
+  "author": "Sawyer Wetson"
+  "testing": "test.py" "test.cs" "test,java" "test.cpp"
+  "Config": "package.json" "config.yaml"
+  "Installer": "Install.bash" "install.json" "OpenCv2setup.yaml"
+  "Src": "Build.html" "setup.py"
+  "OtherFiles": "__init__.py"
+}
