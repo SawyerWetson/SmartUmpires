@@ -29,7 +29,8 @@ The primary aim of SmartUmpires is to **revolutionize the sports world** by intr
 - **Upkeep And Installation** Python and Bash(Shell)
 - **Hardware Integration**: Cameras (details to be added upon completion)
 - **Ball Tracking** Uses Opencv2 library and YAML installation
-- **Strike Zone** Uses Opencv2 library to draw strike zone 
+- **Strike Zone** Uses Opencv2 library to draw strike zone
+- **Testing** Python, C#, Java, and C++ are used to run tests on program
 
 ---
 
