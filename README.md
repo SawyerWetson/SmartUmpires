@@ -101,7 +101,7 @@ This project is licensed under the **BSD-Clause 3 License**. See the `LICENSE` f
 
 ## Credits
 
-Whole project was created by Sawyer Wetson, age: 11. AI(copilot) was used to create some of the .gitignore and bash "Install" file and partially used to learn what to do, what files to include, and how to use them. Otherwise, all coding knowledge was learned from CodeWiz classes(python) W3schools(PHP, JSON, Bash) and other websites or prior knowledge/expreience to computer programming. 
+Whole project was created by Sawyer Wetson, age: 11. AI(copilot) was used to create some of the .gitignore and bash "Install" file and partially used to learn what to do, what files to include, and how to use them. Otherwise, all coding knowledge was learned from CodeWiz classes(python) W3schools(PHP, JSON, Bash) and other websites or prior knowledge/expreience to computer programming. I'd also like to thank canva image editing software for the SmartUmpire logo.
 
 ---
 
@@ -109,5 +109,6 @@ Whole project was created by Sawyer Wetson, age: 11. AI(copilot) was used to cre
 sawyer.wetson@gmail.com
 
 
-![SmartUmpire logo (2)](https://github.com/user-attachments/assets/842d8e97-3bbe-4a64-86c5-4e0f6be6eb40)
+
+![SmartUmpire logo (2)](https://github.com/user-attachments/assets/f88e585c-94b4-42b7-8c2c-5c304c2fc956)
 
