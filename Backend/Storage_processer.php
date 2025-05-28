@@ -18,7 +18,7 @@ if ($file === false) {
     exit;
 }
 
-// If file is new, write the header row
+// if file is new, write the header row
 if (filesize($csvFile) === 0) {
     fputcsv($file, array_keys($dataToStore));
 }
