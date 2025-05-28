@@ -110,5 +110,5 @@ sawyer.wetson@gmail.com
 
 
 
-![SmartUmpire logo (2)](https://github.com/user-attachments/assets/f88e585c-94b4-42b7-8c2c-5c304c2fc956)
 
+![SmartUmpire logo (3)](https://github.com/user-attachments/assets/5d7e2171-49ab-414d-9155-1db50b0717ee)
