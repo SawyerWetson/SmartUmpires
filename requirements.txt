@@ -1,1 +1,2 @@
-- openCv
+- openCv2 
+- numpy
