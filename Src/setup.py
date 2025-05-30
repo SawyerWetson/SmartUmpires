@@ -15,6 +15,8 @@ Some code provided Copilot, and some info from OpenCv python docs
 
 import cv2  # lets us use the camera
 import numpy as np  # helps with math stuff
+import os # helps wiht the voice detection 
+
 
 cap = cv2.VideoCapture(0)  # start the webcam
 
@@ -33,9 +35,12 @@ while True:
     ret, frame = cap.read()
     if not ret: # Ret means return BTW
         break  # if no camera image, stop
-
-    # draw the green strike zone
-    cv2.rectangle(frame, (zone_x1, zone_y1), (zone_x2, zone_y2), (0, 255, 0), 3)
+    strikezone_on = True
+    if os.path.exits("strikezone_state.txt"):
+        with open("strikezone_state.txt") as f:
+            strikezone_on = f.read().strip() == "on"
+    if strikezone_on:
+        cv2.rectangle(frame, (zone_x1, zone_y1), (zone_x2, zone_y2), (0, 255, 0), 3)
 
     # turn picture into HSV so color is easy to find
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
