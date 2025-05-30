@@ -9,10 +9,13 @@ with sr.Microphone() as source:
   try:
     command = r.recognize_google(audio)
     if "turn on strike zone" in command:
-       pass
+       with open("strikezone_state.txt", "w") as f:
+         f.write("On")
     if "turn off strike zone" in command:
-       pass 
+      with open("strikezone_state.txt", "w") as f:
+        f.write("off")
+      
   except sr.UnknownValueError:
-    print("FATAL SERVER ERROR: @repo:sawyerWetson/SmartUmpires/Src/VoiceInput.py "System can not resolve audio" ")
+    print('FATAL SERVER ERROR: @repo:sawyerWetson/SmartUmpires/Src/VoiceInput.py "System can not resolve audio" ')
   
      
