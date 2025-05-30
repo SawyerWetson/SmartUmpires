@@ -7,4 +7,12 @@ with sr.Microphone() as source:
   audio = r.listen(source)
 
   try:
-    command = 
+    command = r.recognize_google(audio)
+    if "turn on strike zone" in command:
+       pass
+    if "turn off strike zone" in command:
+       pass 
+  except sr.UnknownValueError:
+    print("FATAL SERVER ERROR: @repo:sawyerWetson/SmartUmpires/Src/VoiceInput.py "System can not resolve audio" ")
+  
+     
