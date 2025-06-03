@@ -1,4 +1,4 @@
-import speecch_recognition as sr
+import speech_recognition as sr
 
 r = sr.Recognizer()
 
