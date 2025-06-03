@@ -25,7 +25,7 @@ frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 # make a rectangle for the strike zone in the middle
-zone_w, zone_h = 400, 200
+zone_w, zone_h = 300,200
 zone_x1 = (frame_width - zone_w) // 2
 zone_y1 = (frame_height - zone_h) // 2
 zone_x2 = zone_x1 + zone_w
