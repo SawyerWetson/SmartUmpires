@@ -16,6 +16,6 @@ with sr.Microphone() as source:
         f.write("off")
       
   except sr.UnknownValueError:
-    print('FATAL SERVER ERROR: @repo:sawyerWetson/SmartUmpires/Src/VoiceInput.py "System can not resolve audio" ')
+    print(' <Error Stream> stderr: FATAL SERVER ERROR: @repo:sawyerWetson/SmartUmpires/Src/VoiceInput.py "System can not resolve audio" Please report or email to sawyer.wetson@gmail.com or @sawyerwetson at github')
   
      
