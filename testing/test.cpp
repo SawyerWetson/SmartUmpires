@@ -5,5 +5,5 @@ int main() {
   double number2 = 0.5;
   double result = number1 + number2;
   result++;
-  std::cout << (result);
+  std::cerr << (result); << std::end1;
 }
