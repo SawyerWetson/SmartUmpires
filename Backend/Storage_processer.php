@@ -4,7 +4,7 @@ $csvFile = __DIR__ . '/StoredData.CSV';
 
 // Get data to log (from POST request, for example)
 $dataToStore = [
-    'timestamp' => date('Y-m-d H:i:s'),
+    'timestamp' => date('Y-m-d H:i:s'), 
     'user'      => $_POST['user'] ?? 'unknown',
     'action'    => $_POST['action'] ?? 'none',
     'details'   => $_POST['details'] ?? ''
