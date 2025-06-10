@@ -6,17 +6,11 @@ A few things to know, contour means the outline or border of the shape in an ima
 
 Some code provided Copilot, and some info from OpenCv python docs
 
-
-
-
-
-
 '''
 
 import cv2  # lets us use the camera
 import numpy as np  # helps with math stuff
 import os # helps wiht the voice detection 
-
 
 cap = cv2.VideoCapture(0)  # start the webcam
 
@@ -31,16 +25,25 @@ zone_y1 = (frame_height - zone_h) // 2
 zone_x2 = zone_x1 + zone_w
 zone_y2 = zone_y1 + zone_h
 
+# get the center of the strike zone
+zone_center = ((zone_x1 + zone_x2) // 2, (zone_y1 + zone_y2) // 2)
+
 while True:
     ret, frame = cap.read()
     if not ret: # Ret means return BTW
         break  # if no camera image, stop
-    strikezone_on = True
-    if os.path.exits("strikezone_state.txt"):
+
+    # check if strikezone should be shown (voice controlled)
+    if os.path.exists("strikezone_state.txt"):
         with open("strikezone_state.txt") as f:
-            strikezone_on = f.read().strip() == "on"
+            strikezone_on = f.read().strip().lower() == "on"
+    else:
+        strikezone_on = False
+
     if strikezone_on:
         cv2.rectangle(frame, (zone_x1, zone_y1), (zone_x2, zone_y2), (0, 255, 0), 3)
+        # Show the center of the strikezone as a blue dot (for reference)
+        cv2.circle(frame, zone_center, 3, (255, 0, 0), -1)
 
     # turn picture into HSV so color is easy to find
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -59,10 +62,15 @@ while True:
             (x, y), radius = cv2.minEnclosingCircle(largest_contour)
             center = (int(x), int(y))
             radius = int(radius)
-            cv2.circle(frame, center, radius, (0, 255, 0), 2)
+            cv2.circle(frame, center, radius, (0, 255, 0), 2)  # Green outline for the ball
+            cv2.circle(frame, center, 3, (0, 0, 255), -1)      # Red dot at the ball's center (landing spot)
+            # say if the ball is in the strikezone
+            if zone_x1 < center[0] < zone_x2 and zone_y1 < center[1] < zone_y2:
+                cv2.putText(frame, "IN STRIKE ZONE", (zone_x1, zone_y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
 
     # show the video window
     cv2.imshow("Strike Zone Baseball Tracking", frame)
+
     if cv2.waitKey(1) & 0xFF == ord('q'): # keycode for q  to exit program (& OXFF) make sure we only look at the key part
         break  # press q to quit
 
