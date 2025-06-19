@@ -1,11 +1,9 @@
 '''
-
 Welcome to SmartUmpires!!!!
 You are currently viewing the HEART of smartumps, this is the strikezone, ball tracking, and camera feed.
 A few things to know, contour means the outline or border of the shape in an image and ret means return
 
 Some code provided Copilot, and some info from OpenCv python docs
-
 '''
 
 import cv2  # lets us use the camera
@@ -31,6 +29,10 @@ zone_center = ((zone_x1 + zone_x2) // 2, (zone_y1 + zone_y2) // 2)
 # Make the OpenCV window take up the full screen
 cv2.namedWindow("Strike Zone Baseball Tracking", cv2.WND_PROP_FULLSCREEN)
 cv2.setWindowProperty("Strike Zone Baseball Tracking", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
+# ---- Baseball area-based detection settings ----
+MIN_BASEBALL_AREA = 50    # You may need to tweak these for your camera/ball size
+MAX_BASEBALL_AREA = 1500
 
 while True:
     ret, frame = cap.read()
@@ -58,21 +60,27 @@ while True:
     upper_white = np.array([180, 30, 255])
     mask = cv2.inRange(hsv, lower_white, upper_white)
     # find shapes in the mask
-    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) #RETR_EXTERNAL will only give you the border of a shape if there is a shape inside of a shape, and CHAIN_APPROX_SIMPLE means it compresses all the points in the contour.
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    # if we see something white, draw a circle on it
-    if contours:
-        largest_contour = max(contours, key=cv2.contourArea)
-        area = cv2.contourArea(largest_contour)
-        if 50 < area < 1500:  # Only count objects in this size range (adjust for your ball)
-            (x, y), radius = cv2.minEnclosingCircle(largest_contour)
+    # ---- Area-based detection for green circle and "no baseball detected" ----
+    baseball_found = False
+    for cnt in contours:
+        area = cv2.contourArea(cnt)
+        # Uncomment the next line to see the area for calibration:
+        # print("Contour area:", area)
+        if MIN_BASEBALL_AREA < area < MAX_BASEBALL_AREA:
+            (x, y), radius = cv2.minEnclosingCircle(cnt)
             center = (int(x), int(y))
             radius = int(radius)
             cv2.circle(frame, center, radius, (0, 255, 0), 2)  # Green outline for the ball
-            cv2.circle(frame, center, 3, (0, 0, 255), -1)      # Red dot at the ball's center (landing spot)
+            cv2.circle(frame, center, 3, (0, 0, 255), -1)      # Red dot at the ball's center
             # say if the ball is in the strikezone
             if zone_x1 < center[0] < zone_x2 and zone_y1 < center[1] < zone_y2:
                 cv2.putText(frame, "IN STRIKE ZONE", (zone_x1, zone_y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0), 2)
+            baseball_found = True
+
+    if not baseball_found:
+        cv2.putText(frame, "No baseball detected", (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
     # show the video window
     cv2.imshow("Strike Zone Baseball Tracking", frame)
