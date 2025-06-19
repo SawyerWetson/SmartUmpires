@@ -31,8 +31,8 @@ cv2.namedWindow("Strike Zone Baseball Tracking", cv2.WND_PROP_FULLSCREEN)
 cv2.setWindowProperty("Strike Zone Baseball Tracking", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 # ---- Baseball area-based detection settings ----
-MIN_BASEBALL_AREA = 50    # You may need to tweak these for your camera/ball size
-MAX_BASEBALL_AREA = 1500
+MIN_BASEBALL_AREA = 1134   
+MAX_BASEBALL_AREA = 1256
 
 while True:
     ret, frame = cap.read()
