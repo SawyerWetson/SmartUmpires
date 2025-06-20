@@ -30,9 +30,9 @@ zone_center = ((zone_x1 + zone_x2) // 2, (zone_y1 + zone_y2) // 2)
 cv2.namedWindow("Strike Zone Baseball Tracking", cv2.WND_PROP_FULLSCREEN)
 cv2.setWindowProperty("Strike Zone Baseball Tracking", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
-# ---- Baseball area-based detection settings ----
-MIN_BASEBALL_AREA = 1134   
-MAX_BASEBALL_AREA = 1256
+# ---- Baseball area detection settings ----
+MIN_BASEBALL_AREA = 1000
+MAX_BASEBALL_AREA = 3000
 
 while True:
     ret, frame = cap.read()
