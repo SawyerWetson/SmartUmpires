@@ -3,10 +3,10 @@ import os
 import time
 import requests
 
-def is_build_html_working():
+def is_setup_py_working():
   try:
     reponse = 
-requests.get("http://SawyerWetson/SmartUmpires/main/Build.html/
+requests.get("https:/SawyerWetson/SmartUmpires/main/src/setup.py/"
        return response.status_code == 200
       except requests.exceptions.RequestException:
        return False:
