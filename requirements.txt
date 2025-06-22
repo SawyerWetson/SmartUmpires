@@ -1,3 +1,4 @@
 - openCv2 
 - numpy
 - speech_recognition
+- requests
