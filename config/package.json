@@ -13,7 +13,7 @@
     "camera-system"
   ],
   "author": "SawyerWetson",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "dependencies": {},
   "devDependencies": {}
 }
