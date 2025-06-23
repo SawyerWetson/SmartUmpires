@@ -10,20 +10,37 @@ import cv2  # lets us use the camera
 import numpy as np  # helps with math stuff
 import os # helps with the voice detection 
 
+# --- NEW: For getting batter height from user ---
+import tkinter as tk
+from tkinter import simpledialog
+
+def get_batter_height():
+    root = tk.Tk()
+    root.withdraw()
+    height = simpledialog.askinteger("Batter Height", "Enter batter's height in inches (e.g. 60):", minvalue=48, maxvalue=90)
+    root.destroy()
+    return height
+
 cap = cv2.VideoCapture(0)  # start the webcam
 
 # get the camera's width and height
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-# make a rectangle for the strike zone in the middle
-zone_w, zone_h = 300,200
+# --- NEW: Get batter height and resize strike zone ---
+batter_height_in = get_batter_height() or 72  # default to 72 if not entered
+
+# Calculate the strike zone based on batter height
+strike_zone_inches = batter_height_in * 0.5  # strike zone is ~50% of height
+pixels_per_inch = frame_height / 72  # or calibrate to your camera setup
+zone_h = int(strike_zone_inches * pixels_per_inch)
+zone_w = 300  # or scale with height
+
 zone_x1 = (frame_width - zone_w) // 2
 zone_y1 = (frame_height - zone_h) // 2
 zone_x2 = zone_x1 + zone_w
 zone_y2 = zone_y1 + zone_h
-
-# get the center of the strike zone
+# get the center
 zone_center = ((zone_x1 + zone_x2) // 2, (zone_y1 + zone_y2) // 2)
 
 # Make the OpenCV window take up the full screen
