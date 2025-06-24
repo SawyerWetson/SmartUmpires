@@ -37,3 +37,5 @@ def show_actions_panel(batter_height_in, strikezone_on):
     tk.Label(window, text="Close this window to return.", font=("Arial", 9)).pack(pady=10)
     window.mainloop()
     return panel_result
+if __name__ == "__main__":
+    show_actions_panel(batter_height_in=70, strikezone_on = True)
