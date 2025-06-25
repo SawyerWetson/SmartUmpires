@@ -19,5 +19,5 @@ while True:
     else:
         print("setup.py is not accessible. Rebooting....")
         os.system("git reset --hard && git pull SawyerWetson main")
-        os.system("start Build.html")  # This only works on Windows with proper associations
+        os.system("start setup.py")  # This only works on Windows with proper associations
         time.sleep(5)
