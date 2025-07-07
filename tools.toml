@@ -1,0 +1,13 @@
+[tools.camera]
+enabled = true
+resolution = "1920x1080"
+
+[tools.strikezone]
+color = "green"
+visible = true
+
+
+[tools.dev_actions_panel]
+enabled = true
+type = "menu"
+
