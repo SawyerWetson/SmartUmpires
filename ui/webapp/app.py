@@ -5,6 +5,8 @@ import os
 
 app = Flask(__name__)
 app.route('/run-strikezone', methods=['POST'])
+def home():
+    app.route("/")
 def run_strikezone():
     try:
         # Go up two levels: from ui/webapp/ to SmartUmpires/
