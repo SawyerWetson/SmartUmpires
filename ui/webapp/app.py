@@ -1,6 +1,6 @@
 import os
 
-@app.route('/run-strikezone', methods=['POST'])
+app.route('/run-strikezone', methods=['POST'])
 def run_strikezone():
     try:
         # Go up two levels: from ui/webapp/ to SmartUmpires/
