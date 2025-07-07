@@ -19,3 +19,5 @@ def run_strikezone():
             return jsonify({'message': f'Error running setup.py:\n{output}'}), 500
     except Exception as e:
         return jsonify({'message': f'Exception: {e}'}), 500
+if __name__ == "__main__":
+    app.run(debug=True)
