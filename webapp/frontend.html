@@ -1,0 +1,21 @@
+<!Doctype HTML>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width= device-width intial-scale= 1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<html>
+  <head>
+    <title>SmartUmpires Web App</title>
+    <script>
+       function runStrikeZone() {
+         fetch('/run-strikezone', {method: 'POST'}
+         .then(response => response.json())
+         .then(data => {
+           alert(data.message);
+         });
+       }
+    </script>
+  </head>
+<body>
+  <button onclick="runStrikeZone()">Run StrikeZone</button>
+</body>
+</html>
