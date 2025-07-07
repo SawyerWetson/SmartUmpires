@@ -1,5 +1,9 @@
+from flask import Flask, jsonify
+import subprocess
+import sys
 import os
 
+app = Flask(__name__)
 app.route('/run-strikezone', methods=['POST'])
 def run_strikezone():
     try:
