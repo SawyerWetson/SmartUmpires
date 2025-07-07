@@ -109,6 +109,7 @@ Whole project was created by Sawyer Wetson, age: 11. AI(copilot) was used to cre
 sawyer.wetson@gmail.com
 
 
+![SmartUmpires logo png](https://github.com/user-attachments/assets/6f1060fd-b341-42ab-b79b-663fe83d5dd4)
 
 
-![SmartUmpire logo (3)](https://github.com/user-attachments/assets/5d7e2171-49ab-414d-9155-1db50b0717ee)
+
