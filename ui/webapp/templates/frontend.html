@@ -1,22 +1,84 @@
 <!DOCTYPE html>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width= device-width intial-scale= 1.0"/>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>SmartUmpires StrikeZone</title>
+    <style>
+        body {
+            background: #f4f8fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 80px auto 0 auto;
+            padding: 30px 40px 40px 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.11);
+            text-align: center;
+        }
+        h1 {
+            color: #19233c;
+            font-size: 2.1rem;
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+        .subtitle {
+            color: #7b8bae;
+            font-size: 1.08rem;
+            margin-bottom: 28px;
+        }
+        .strike-btn {
+            background: linear-gradient(90deg, #005bea 0%, #3ec6e0 100%);
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 15px 38px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,64,128,0.08);
+            transition: background 0.2s, transform 0.1s;
+        }
+        .strike-btn:hover {
+            background: linear-gradient(90deg, #3ec6e0 0%, #005bea 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .status-message {
+            margin-top: 32px;
+            font-size: 1.07rem;
+            color: #005bea;
+            min-height: 24px;
+        }
+    </style>
     <script>
         function runStrikeZone() {
+            const btn = document.getElementById('strike-btn');
+            const status = document.getElementById('status-message');
+            btn.disabled = true;
+            status.textContent = "Running StrikeZone...";
             fetch('/run-strikezone', {method: 'POST'})
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-            });
+                .then(response => response.json())
+                .then(data => {
+                    status.textContent = data.message;
+                })
+                .catch(() => {
+                    status.textContent = "An error occurred. Please try again.";
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                });
         }
     </script>
 </head>
 <body>
-    <h1>SmartUmpires Control Panel</h1>
-    <button onclick="runStrikeZone()">Run StrikeZone</button>
+    <div class="container">
+        <h1>SmartUmpires</h1>
+        <div class="subtitle">StrikeZone System Control Panel</div>
+        <button id="strike-btn" class="strike-btn" onclick="runStrikeZone()">Run StrikeZone</button>
+        <div id="status-message" class="status-message"></div>
+    </div>
 </body>
 </html>
