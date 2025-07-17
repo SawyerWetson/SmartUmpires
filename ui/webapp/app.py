@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, render_template, jsonify
 import subprocess
 import sys
 import os
@@ -7,12 +7,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "SmartUmpires Flask Server is running!"
+    
+    return render_template('frontend.html')
 
 @app.route('/run-strikezone', methods=['POST'])
 def run_strikezone():
     try:
-        # Go up two levels: from ui/webapp/ to SmartUmpires/
         script_path = os.path.abspath(
             os.path.join(os.path.dirname(__file__), '..', '..', 'src', 'setup.py')
         )
