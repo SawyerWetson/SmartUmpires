@@ -1,0 +1,13 @@
+Minimum Requirenments: 
+intel core i3 - AMD Ryzen 3
+Integrated Grahpics/ Intel Hd-series iGpu
+Space: 200MB - 2.5GB
+
+Recommended Specs:
+intel core i5-K suffix/intel core i7-L/ intel core i9 -KF or AMD Ryzen 5 / AMD Ryzen 7
+Intel Iris Xe Graphics or Intel Arc series grapihcs/ or Intel igpu version : 32.0.101 or Amd Radeon Laptop graphics card/ NVIDIA GT 560 or NVIDIA RTX 2060/ 2050
+
+NOT supported:
+intel celeron/intel pentium processors
+Nvidia/AMD Gpus released before 1970s
+Intel Hd/UHD iGPU before 2001
